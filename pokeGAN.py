@@ -234,12 +234,12 @@ def train():
 
             # print 'train:[%d/%d],d_loss:%f,g_loss:%f' % (i, j, dLoss, gLoss)
             
-        # save check point every 500 epoch
-        if i%500 == 0:
+        # save check point every 100 epoch
+        if i%100 == 0:
             if not os.path.exists('./model/' + version):
                 os.makedirs('./model/' + version)
             saver.save(sess, './model/' +version + '/' + str(i))  
-        if i%50 == 0:
+        if i%10 == 0:
             # save images
             if not os.path.exists(newPoke_path):
                 os.makedirs(newPoke_path)
